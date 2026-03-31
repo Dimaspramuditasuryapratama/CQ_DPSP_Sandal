@@ -94,7 +94,47 @@ namespace PraktikumMysql
             }
         }
 
-        
+        private void btnHitungDosen_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                koneksi(); conn.Open();
+                string query = "select count(*) from Dosen";
+                cmd = new MySqlCommand(query, conn);
+                int jumlah = (int)cmd.ExecuteScalar();
+                txtHasil.Text = jumlah.ToString();
+                conn.Close();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        private void btnUpdateSKS_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                koneksi(); conn.Open();
+                string query = "UPDATE MataKuliah SET SKS = 4 WHERE KodeMK = 'IF210101'";
+                cmd = new MySqlCommand(query, conn);
+                int hasil = cmd.ExecuteNonQuery();
+                MessageBox.Show("Baris terpengaruh: " + hasil);
+                conn.Close();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        private void btnInsertProdi_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                koneksi(); conn.Open();
+                string query = "INSERT INTO ProgramStudi VALUES ('MI01','Manajemen Informatika')";
+                cmd = new MySqlCommand(query, conn);
+                int hasil = cmd.ExecuteNonQuery();
+                MessageBox.Show("Data berhasil ditambahkan. Baris terpengaruh: " + hasil);
+                conn.Close();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
     }
 
 }
