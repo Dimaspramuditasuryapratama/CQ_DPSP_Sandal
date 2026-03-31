@@ -46,6 +46,7 @@
             this.label1.Size = new System.Drawing.Size(44, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Hasil";
+            
             // 
             // btnConnect
             // 
@@ -62,7 +63,7 @@
             this.btnHitungMhs.Name = "btnHitungMhs";
             this.btnHitungMhs.Size = new System.Drawing.Size(113, 34);
             this.btnHitungMhs.TabIndex = 6;
-            this.btnHitungMhs.Text = "Hitung Mhs";
+            this.btnHitungMhs.Text = "HitungMhs";
             this.btnHitungMhs.UseVisualStyleBackColor = true;
             // 
             // btnHitungMK
@@ -71,7 +72,7 @@
             this.btnHitungMK.Name = "btnHitungMK";
             this.btnHitungMK.Size = new System.Drawing.Size(108, 34);
             this.btnHitungMK.TabIndex = 7;
-            this.btnHitungMK.Text = "Hitung MK";
+            this.btnHitungMK.Text = "HitungMK";
             this.btnHitungMK.UseVisualStyleBackColor = true;
             // 
             // btnUpdate
@@ -109,6 +110,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+ 
             this.ResumeLayout(false);
             this.PerformLayout();
 
