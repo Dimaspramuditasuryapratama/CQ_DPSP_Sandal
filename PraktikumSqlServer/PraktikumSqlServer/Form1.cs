@@ -64,6 +64,54 @@ namespace PraktikumSqlServer
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
-        
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Koneksi(); conn.Open();
+                string query = "UPDATE Mahasiswa SET Alamat='Yogyakarta' WHERE NIM='23110100001'";
+                cmd = new SqlCommand(query, conn);
+                int hasil = cmd.ExecuteNonQuery();
+                MessageBox.Show("Jumlah baris terpengaruh : " + hasil);
+                conn.Close();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        private void btnHitungDosen_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Koneksi(); conn.Open();
+                cmd = new SqlCommand("SELECT COUNT(*) FROM Dosen", conn);
+                txtHasil.Text = ((int)cmd.ExecuteScalar()).ToString();
+                conn.Close();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        private void btnUpdateSKS_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Koneksi(); conn.Open();
+                cmd = new SqlCommand("UPDATE MataKuliah SET SKS=4 WHERE KodeMK='IF210101'", conn);
+                MessageBox.Show("Baris terpengaruh: " + cmd.ExecuteNonQuery());
+                conn.Close();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        private void btnInsertProdi_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Koneksi(); conn.Open();
+                cmd = new SqlCommand("INSERT INTO ProgramStudi VALUES ('MI01','Manajemen Informatika')", conn);
+                MessageBox.Show("Data ditambahkan. Baris: " + cmd.ExecuteNonQuery());
+                conn.Close();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
     }
 }
