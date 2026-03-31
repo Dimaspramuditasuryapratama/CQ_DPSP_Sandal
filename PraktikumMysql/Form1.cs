@@ -50,6 +50,25 @@ namespace PraktikumMysql
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void btnHitungMK_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                koneksi();
+                conn.Open();
+                string query = "select count(*) from MataKuliah";
+                cmd = new MySqlCommand(query, conn);
+                int jumlah = (int)cmd.ExecuteScalar();
+                txtHasil.Text = jumlah.ToString();
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Message", ex.Message,
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 
 }
