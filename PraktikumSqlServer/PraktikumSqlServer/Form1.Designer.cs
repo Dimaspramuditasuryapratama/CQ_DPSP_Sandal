@@ -47,6 +47,7 @@
             this.btnConnect.TabIndex = 0;
             this.btnConnect.Text = "Connect";
             this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
             // btnHitungMhs
             // 
@@ -56,6 +57,7 @@
             this.btnHitungMhs.TabIndex = 1;
             this.btnHitungMhs.Text = "HitungMhs";
             this.btnHitungMhs.UseVisualStyleBackColor = true;
+            this.btnHitungMhs.Click += new System.EventHandler(this.btnHitungMhs_Click);
             // 
             // btnHitungMK
             // 
@@ -65,6 +67,7 @@
             this.btnHitungMK.TabIndex = 2;
             this.btnHitungMK.Text = "HitungMK";
             this.btnHitungMK.UseVisualStyleBackColor = true;
+            this.btnHitungMK.Click += new System.EventHandler(this.btnHitungMK_Click);
             // 
             // btnUpdate
             // 
@@ -74,6 +77,7 @@
             this.btnUpdate.TabIndex = 3;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.MouseCaptureChanged += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnHitungDosen
             // 
@@ -83,6 +87,7 @@
             this.btnHitungDosen.TabIndex = 4;
             this.btnHitungDosen.Text = "HitungDosen";
             this.btnHitungDosen.UseVisualStyleBackColor = true;
+            this.btnHitungDosen.MouseCaptureChanged += new System.EventHandler(this.btnHitungDosen_Click);
             // 
             // btnUpdateSKS
             // 
@@ -92,6 +97,7 @@
             this.btnUpdateSKS.TabIndex = 5;
             this.btnUpdateSKS.Text = "UpdateSKS";
             this.btnUpdateSKS.UseVisualStyleBackColor = true;
+            this.btnUpdateSKS.MouseCaptureChanged += new System.EventHandler(this.btnUpdateSKS_Click);
             // 
             // btnInsertProdi
             // 
@@ -101,6 +107,7 @@
             this.btnInsertProdi.TabIndex = 6;
             this.btnInsertProdi.Text = "InsertProdi";
             this.btnInsertProdi.UseVisualStyleBackColor = true;
+            this.btnInsertProdi.MouseCaptureChanged += new System.EventHandler(this.btnInsertProdi_Click);
             // 
             // label1
             // 
