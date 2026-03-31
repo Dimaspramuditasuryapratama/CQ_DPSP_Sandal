@@ -69,6 +69,26 @@ namespace PraktikumMysql
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                koneksi();
+                conn.Open();
+                string query = "update mahasiswa set Alamat = 'Yogyakarta' where NIM = '23110100001'";
+                cmd = new MySqlCommand(query, conn);
+                int hasil = cmd.ExecuteNonQuery();
+                MessageBox.Show("Message", "Jumlah baris terpengaruh : " + hasil,
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Message", ex.Message,
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 
 }
